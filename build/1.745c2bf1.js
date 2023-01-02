@@ -5140,7 +5140,7 @@
                                     n = "none";
                                 if (!e || t <= 0) return "none";
                                 switch (e) {
-                                    case "advert.type.house":
+                                    case "Maison":
                                     case "advert.type.villa":
                                     case "advert.type.castle":
                                     case "advert.type.building":
@@ -5153,7 +5153,7 @@
                                     case "advert.type.industrial":
                                         n = e, this.input.find(".pw-estim-is-apt").addClass("d-none"), this.input.find(".pw-estim-is-house").removeClass("d-none");
                                         break;
-                                    case "advert.type.flat":
+                                    case "Appartement":
                                         n = "advert.type.apartment.t" + t, 5 === t && (n += "p"), this.input.find(".pw-estim-is-apt").removeClass("d-none"), this.input.find(".pw-estim-is-house").addClass("d-none")
                                 }
                                 return this.__set("apiPropertyType", n), n
