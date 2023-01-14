@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+
+<html lang="fr" @type="Organization" legalname="IMOVA SARL" foundingdate="2022">
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const pk = urlParams.get('pk')
+    fetch('https://imova-list.herokuapp.com/listings/' + pk)
+        .then(response => response.text())
+        .then(response => {
+            document.getElementById("listing_details").innerHTML = response;
+        }
+        )
+</script>
+
+<div id="listing_details"></div>
+
+</html>
