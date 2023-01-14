@@ -448,7 +448,7 @@
         </div>
     </header>
     <!-- ========== END HEADER ========== -->
-    
+
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content" role="main" class="">
 
@@ -457,7 +457,9 @@
             <div class="container space-1 mt-6">
 
                 <form name="advert_filter" method="post" id="advert_filter_form" class="" data-mode="ImmoPop">
-
+                    <div hx-get="https://imova-list.herokuapp.com/listings/search" hx-target="#list_properties"
+                        hx-trigger="click from:#searchFormFilters2" hx-include="select,input">
+                    </div>
 
 
 
@@ -480,7 +482,7 @@
                                             <i class="fas fa-fw fa-city text-primary"></i> &nbsp;
                                             <label class="" for="advert_filter_cities">Villes</label>
                                             <div class="input-group input-group-pill">
-                                                <select id="advert_filter_cities" name="city"
+                                                <select id="filter_cities" name="city"
                                                     class="form-control select2 form-control" multiple="multiple">
                                                     <optgroup id="cities_options">
                                             </div>
@@ -502,7 +504,7 @@
                                         <i class="fas fa-fw fa-home text-primary"></i> &nbsp;
                                         <label class="" for="advert_filter_type">Type de Bien</label>
                                         <div class="input-group input-group-pill">
-                                            <select id="advert_filter_type" name="listing_type"
+                                            <select id="filter_type" name="listing_type"
                                                 class="form-control select2 form-control" multiple="multiple">
                                                 <optgroup id="listing_types_options">
                                         </div>
@@ -669,14 +671,14 @@
                             <!-- Search by Ref -->
                             <div class="col-12">
                                 <div class="js-focus-state">
-                                    <label for="advert_filter_reference">Reference</label>
+                                    <label for="filter_reference">Reference</label>
                                     <div class="input-group input-group-sm input-group-pill">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="typeProperty">
                                                 <span class="fas fa-filter"></span>
                                             </span>
                                         </div>
-                                        <input type="text" id="advert_filter_reference" name="advert_filter[reference]"
+                                        <input type="text" id="filter_reference" name="reference"
                                             class="form-control form-control" placeholder="Référence" />
 
                                     </div>
@@ -688,24 +690,25 @@
 
 
                     </div>
-            </div>
 
-            <div id="searchRefineCollapse" class="collapse" data-parent="#searchFormFilters">
+                    <div id="searchRefineCollapse" class="collapse" data-parent="#searchFormFilters">
 
-                <div class="card bg-gray p-3 mt-2">
+                        <div class="card bg-gray p-3 mt-2">
 
-                    <div class="row">
-                        <div class="col-lg-7 u-ver-divider u-ver-divider--none-lg mb-5 mb-lg-0">
-                            <div class="pr-lg-2">
+                            <div class="row">
+                                <div class="col-lg-7 u-ver-divider u-ver-divider--none-lg mb-5 mb-lg-0">
+                                    <div class="pr-lg-2">
 
-                                <label class="mb-2">Prix du bien</label>
+                                        <label class="mb-2">Prix du bien</label>
 
 
-                                <!-- Price range Area Charts -->
-                                <div class="position-relative overflow-hidden" style="height: 6rem; width: 100%;">
-                                    <div class="position-absolute w-100 overflow-hidden">
-                                        <div style="height: 6rem; width: 100%;">
-                                            <canvas class="js-search-chart position-absolute" data-hs-chartjs-options='{
+                                        <!-- Price range Area Charts -->
+                                        <div class="position-relative overflow-hidden"
+                                            style="height: 6rem; width: 100%;">
+                                            <div class="position-absolute w-100 overflow-hidden">
+                                                <div style="height: 6rem; width: 100%;">
+                                                    <canvas class="js-search-chart position-absolute"
+                                                        data-hs-chartjs-options='{
                         "type": "bar",
                         "data": {
                             "labels": [&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],
@@ -741,11 +744,12 @@
                                 }
                             }
                         }'>
-                                            </canvas>
+                                                    </canvas>
 
-                                            <div id="bgPriceRangeChart" class="position-absolute overflow-hidden">
-                                                <div style="height: 6rem; width: 100%;">
-                                                    <canvas class="js-search-chart" data-hs-chartjs-options='{
+                                                    <div id="bgPriceRangeChart"
+                                                        class="position-absolute overflow-hidden">
+                                                        <div style="height: 6rem; width: 100%;">
+                                                            <canvas class="js-search-chart" data-hs-chartjs-options='{
                                 "type": "bar",
                                 "data": {
                                     "labels": [&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],
@@ -781,17 +785,17 @@
                                         }
                                     }
                                 }'>
-                                                    </canvas>
+                                                            </canvas>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
-
                                         </div>
-                                    </div>
-                                </div>
-                                <!-- End Price range Area Charts -->
+                                        <!-- End Price range Area Charts -->
 
-                                <!-- Price Range Slider -->
-                                <input class="js-search-slider" type="text" data-hs-ion-range-slider-options='{
+                                        <!-- Price Range Slider -->
+                                        <input class="js-search-slider" type="text" data-hs-ion-range-slider-options='{
                 "type": "double",
                 "extra_classes": "range-slider-custom",
                 "step": "10000",
@@ -804,43 +808,47 @@
                 "result_max_target_el": "#advert_filter_maxPrice",
                 "foreground_target_el": "#bgPriceRangeChart"
            }'>
-                                <!-- End Price Range Slider -->
+                                        <!-- End Price Range Slider -->
 
 
-                                <div class="d-flex justify-content-between align-items-center mt-4 text-center">
-                                    <div class="pl-md-3">
-                                        <span class="text-muted">Prix:</span>
-                                        <span id="advert_filter_strPrice" class="text-muted"></span>
+                                        <div class="d-flex justify-content-between align-items-center mt-4 text-center">
+                                            <div class="pl-md-3">
+                                                <span class="text-muted">Prix:</span>
+                                                <span id="advert_filter_strPrice" class="text-muted"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="">
+                                            <input type="hidden" id="advert_filter_minPrice"
+                                                name="advert_filter[minPrice]" class="form-control"
+                                                placeholder="Prix minimum" />
+                                            <input type="hidden" id="advert_filter_maxPrice"
+                                                name="advert_filter[maxPrice]" class="form-control"
+                                                placeholder="Prix max" />
+                                            <input type="hidden" id="advert_filter_minRentPrice"
+                                                name="advert_filter[minRentPrice]" class="form-control"
+                                                placeholder="Loyer minimum" />
+                                            <input type="hidden" id="advert_filter_maxRentPrice"
+                                                name="advert_filter[maxRentPrice]" class="form-control"
+                                                placeholder="Loyer max" />
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="">
-                                    <input type="hidden" id="advert_filter_minPrice" name="advert_filter[minPrice]"
-                                        class="form-control" placeholder="Prix minimum" />
-                                    <input type="hidden" id="advert_filter_maxPrice" name="advert_filter[maxPrice]"
-                                        class="form-control" placeholder="Prix max" />
-                                    <input type="hidden" id="advert_filter_minRentPrice"
-                                        name="advert_filter[minRentPrice]" class="form-control"
-                                        placeholder="Loyer minimum" />
-                                    <input type="hidden" id="advert_filter_maxRentPrice"
-                                        name="advert_filter[maxRentPrice]" class="form-control"
-                                        placeholder="Loyer max" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5">
-                            <div class="pr-lg-2">
-                                <label class="mb-2">Surface habitable</label>
+                                <div class="col-lg-5">
+                                    <div class="pr-lg-2">
+                                        <label class="mb-2">Surface habitable</label>
 
 
-                                <!-- Price range Area Charts -->
-                                <div class="position-relative overflow-hidden" style="height: 6rem; width: 100%;">
-                                    <div class="position-absolute w-100 overflow-hidden">
-                                        <div style="height: 6rem; width: 100%;">
+                                        <!-- Price range Area Charts -->
+                                        <div class="position-relative overflow-hidden"
+                                            style="height: 6rem; width: 100%;">
+                                            <div class="position-absolute w-100 overflow-hidden">
+                                                <div style="height: 6rem; width: 100%;">
 
-                                            <canvas class="js-search-chart position-absolute w-100 overflow-hidden"
-                                                data-hs-chartjs-options='{
+                                                    <canvas
+                                                        class="js-search-chart position-absolute w-100 overflow-hidden"
+                                                        data-hs-chartjs-options='{
                         "type": "bar",
                         "data": {
                             "labels": [&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],
@@ -876,12 +884,12 @@
                                 }
                             }
                         }'>
-                                            </canvas>
+                                                    </canvas>
 
-                                            <div id="bgSurfaceRangeChart"
-                                                class="position-absolute h-100 overflow-hidden">
-                                                <div style="height: 6rem; width: 100%;">
-                                                    <canvas class="js-search-chart" data-hs-chartjs-options='{
+                                                    <div id="bgSurfaceRangeChart"
+                                                        class="position-absolute h-100 overflow-hidden">
+                                                        <div style="height: 6rem; width: 100%;">
+                                                            <canvas class="js-search-chart" data-hs-chartjs-options='{
                                 "type": "bar",
                                 "data": {
                                     "labels": [&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],
@@ -917,16 +925,16 @@
                                         }
                                     }
                                 }'>
-                                                    </canvas>
+                                                            </canvas>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <!-- End Price range Area Charts -->
+                                        <!-- End Price range Area Charts -->
 
-                                <!-- Price Range Slider -->
-                                <input class="js-search-slider" type="text" data-hs-ion-range-slider-options='{
+                                        <!-- Price Range Slider -->
+                                        <input class="js-search-slider" type="text" data-hs-ion-range-slider-options='{
                 "type": "double",
                 "extra_classes": "range-slider-custom",
                 "step": "5",
@@ -939,34 +947,34 @@
                 "result_max_target_el": "#advert_filter_maxSurface",
                 "foreground_target_el": "#bgSurfaceRangeChart"
            }'>
-                                <!-- End Price Range Slider -->
+                                        <!-- End Price Range Slider -->
 
-                                <div class="d-flex justify-content-between align-items-center mt-4 text-center">
-                                    <div class="pl-md-3">
-                                        <span class="text-muted">Surface:</span>
-                                        <span id="advert_filter_strSurface" class="text-muted"></span>
+                                        <div class="d-flex justify-content-between align-items-center mt-4 text-center">
+                                            <div class="pl-md-3">
+                                                <span class="text-muted">Surface:</span>
+                                                <span id="advert_filter_strSurface" class="text-muted"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="">
+                                            <input type="hidden" id="advert_filter_minSurface"
+                                                name="advert_filter[minSurface]" class="form-control"
+                                                placeholder="Surface minimum" />
+                                            <input type="hidden" id="advert_filter_maxSurface"
+                                                name="advert_filter[maxSurface]" class="form-control"
+                                                placeholder="Surface max" />
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="">
-                                    <input type="hidden" id="advert_filter_minSurface" name="advert_filter[minSurface]"
-                                        class="form-control" placeholder="Surface minimum" />
-                                    <input type="hidden" id="advert_filter_maxSurface" name="advert_filter[maxSurface]"
-                                        class="form-control" placeholder="Surface max" />
-                                </div>
                             </div>
+
                         </div>
                     </div>
+                    <input type="hidden" id="advert_filter_sort" name="advert_filter[sort]" required="required" />
 
-                </div>
+
+                </form>
             </div>
-        </div>
-
-
-        <input type="hidden" id="advert_filter_locationType" name="advert_filter[locationType]" />
-        <input type="hidden" id="advert_filter_sort" name="advert_filter[sort]" required="required" />
-        </form>
-        </div>
         </div>
         <!-- End Search Section -->
         <!-- Search Map -->
@@ -1021,13 +1029,7 @@
         <!-- List of Properties Section -->
         <div id="list_properties">
         </div>
-        <div hx-get="https://imova-list.herokuapp.com/listings/search" hx-target="#list_properties" hx-trigger="load">
-            <div class="htmx-indicator pw-loader text-center justify-content-center">
-                <div class="spinner-border mt-10 mb-10" style="width: 3rem; height: 3rem;" role="status" id="loader">
-                    <span class="sr-only">Loading...</span>
-                </div>
-            </div>
-        </div>
+
         <!-- End Filters Section -->
 
 
@@ -1081,7 +1083,7 @@
                                     </span>
                                     <span class="my-auto">
                                         Email :
-                                        <a href='mailto:contact@Imova.pro'>contact@Imova.pro</a>
+                                        <a href='mailto:hello@Imova.pro'>hello@Imova.pro</a>
                                     </span>
                                 </div>
                                 <!-- End Email Contact -->
