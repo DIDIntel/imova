@@ -2789,11 +2789,14 @@ align-content: center;
                     </span>
                 </div>
 
+
+
+
+
+
+                <!-- WIZARD 🧙‍♂️ -->
                 <div class="text-center w-lg-50 mx-auto space-top-md-2">
                     <div class="card">
-
-
-
                         <div class="card card-frame  card-frame-style-primary">
 
 
@@ -2829,16 +2832,57 @@ align-content: center;
                                         <!-- End Wizard Progress Bar -->
 
 
+                                        <!-- Adresse -->
                                         <!-- Property Type Section -->
-                                        <div id="propertyType" class="pw-section form-section d-none active" data-pw-disable="false">
+                                        <div id="contact" class="pw-section form-section d-none active" data-pw-disable="false">
+
+                                            <div class="js-form-message">
+                                                <div class="pb-2 mb-4 pl-2 pr-4">
+
+                                                    <h3 class="h4 mt-4 text-center my-4">
+                                                        <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                            Quelle est l’adresse de votre bien ?
+                                                        </span>
+                                                    </h3>
+                                                    <div class="row justify-content-center">
+                                                        <div class="col-md-12 col-sm-12 mb-md-12">
+                                                            <div class="form-group"><label class="form-label ml-1 required" for="estimation_Adresse">Adresse</label><input type="text" id="estimation_Adresse" name="estimation[Adresse]" required="required" class="form-control form-control-sm input-group-pill form-control"
+                                                                    placeholder="Adresse" /></div>
+                                                        </div>
+                                                        <div class="col-md-12 col-sm-12 mb-md-12">
+                                                            <div class="form-group"><label class="form-label ml-1 required" for="estimation_Ville">Ville</label><input type="text" id="estimation_Ville" name="estimation[Ville]" required="required" class="form-control form-control-sm input-group-pill form-control"
+                                                                    placeholder="Ville" /></div>
+                                                        </div>
+                                                        <div class="col-md-12 col-sm-12 mb-md-12">
+                                                            <div class="form-group"><label class="form-label ml-1 required" for="estimation_Gouvernorat">Gouvernorat</label><input type="text" id="estimation_Gouvernorat" name="estimation[Gouvernorat]" required="required" class="form-control form-control-sm input-group-pill form-control"
+                                                                    placeholder="Gouvernorat" /></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-navigation row justify-content-around">
+                                                <div id="propertyTypeNext" class="col text-center">
+                                                    <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-next">
+                                                        <i class="fa fa-arrow-right"></i>
+                                                        Suivant
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Property Type Section -->
+
+
+                                        <!-- Property Type Section -->
+                                        <div id="propertyType" class="pw-section form-section d-none " data-pw-disable="false">
 
                                             <div class="js-form-message">
                                                 <div class="pb-2 mb-4 px-md-2 h-100">
 
                                                     <h3 class="h4 mt-4 text-center my-4">
-                                                        <span class="text-highlight-primary text-highlight-lg pw-section-title">
-                                                            Que souhaitez-vous estimer ?
-                                                        </span>
+                                                        <!-- <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                             
+                                                        </span> -->
                                                     </h3>
                                                     <div class="row h-100">
                                                         <div class="col-12 my-auto">
@@ -3534,7 +3578,7 @@ align-content: center;
 
                                                     <h3 class="h4 mt-4 text-center my-4">
                                                         <span class="text-highlight-primary text-highlight-lg pw-section-title">
-                                                            Recevez dès maintenant votre estimation !
+                                                            Recevez dès maintenant votre estimation réalisée par notre  expert IMOVA !
                                                         </span>
                                                     </h3>
                                                     <div class="row justify-content-center">
@@ -3577,7 +3621,7 @@ align-content: center;
                                                     <button class="btn btn-block btn-primary btn-wide transition-3d-hover mb-md-2 pop_ga_event pop_gt_event pop_fb_form_event" type="submit" data-ga-event="Submit Estimation Form" data-ga-label="Envoi du Formulaire" data-gt-send-to="AW-851910592/xtGlCIiip-EBEMC_nJYD"
                                                         data-fb-type="SubmitEstimationForm">
                                                         <i class="fa fa-arrow-right"></i>
-                                                        Votre estimation </button>
+                                                        Estimer mon bien </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -3613,7 +3657,7 @@ align-content: center;
         <div class="container space-1 space-md-1" id="faqCollapseSection">
             <!-- Title -->
             <div class="w-md-80 w-lg-50 text-center mx-md-auto mb-9">
-                <a class="btn btn-xs btn-soft-success btn-pill mb-2" href="contact.html">
+                <a class="btn btn-xs btn-soft-success btn-pill mb-2" href="faq.html#faqGeneralSection">
                     FAQ
                 </a>
                 <h2 class="text-primary">
@@ -3647,7 +3691,7 @@ align-content: center;
                                 Première agence immobilière en ligne, le tarif unique c’est notre ADN ! <br /><br /> Nous avons décidé d’appliquer une tarification plus juste, représentative des coûts réellement engagés lors d’une vente immobilière :
                                 le prix d'achat est plus attractif pour l'acquéreur et la vente est plus rapide qu'en agence traditionnelle. <br /><br /> Acquéreur comme vendeur, avec notre forfait fixe chacun s’y retrouve ! <br /><br />
                                 <div class="row justify-content-center">
-                                    <a href="contact.html" class="btn btn-sm btn-soft-blue transition-3d-hover col-6 col-md-4"> <i class="fas fa-arrow-circle-right"></i> Laissez nous vous convaincre </a>
+                                    <a href="faq.html#faqGeneralSection" class="btn btn-sm btn-soft-blue transition-3d-hover col-6 col-md-4"> <i class="fas fa-arrow-circle-right"></i> Laissez nous vous convaincre </a>
                                 </div>
                             </div>
                         </div>
@@ -3852,29 +3896,26 @@ align-content: center;
             <div class="row justify-content-center justify-content-lg-between my-4 mx-md-5">
 
                 <div class="col-6 col-sm-4 col-md-3 text-center text-md-left px-1">
-                    <div class="h6 font-weight-semi-bold text-primary">Acheter</div>
+                    <div class="h6 font-weight-semi-bold text-primary">Services</div>
 
                     <!-- List Group -->
                     <ul class="nav nav-sm nav-x-0 flex-column mb-0">
                         <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="search.html"> -->
-                            <!-- <a class="nav-link py-1" href="search.html"> -->
-                            <a class="nav-link py-1">
-                                Recherche
+                            <a class="nav-link py-1" href="search.html">
+                                Acheter
                             </a>
                         </li>
                         <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="alerts/index.html"> -->
-                            <!-- <a class="nav-link py-1" href="alerts/index.html"> -->
-                            <a class="nav-link py-1">
-                                Alertes acquéreurs
+                            <a class="nav-link py-1" href="vendre.html">
+                                Vendre
                             </a>
                         </li>
                         <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="login.html"> -->
-                            <!-- <a class="nav-link py-1" href="login.html"> -->
-                            <a class="nav-link py-1">
-                                Connexion
+                            <a class="nav-link py-1" href="contact.html">
+                                Contact
                             </a>
                         </li>
 
@@ -3884,29 +3925,26 @@ align-content: center;
 
                 <div class="col-6 col-sm-4 col-md-3 text-center text-md-left px-1">
 
-                    <div class="h6 font-weight-semi-bold text-primary">Vendre</div>
+                    <div class="h6 font-weight-semi-bold text-primary">Découvrir</div>
 
                     <!-- List Group -->
                     <ul class="nav nav-sm nav-x-0 flex-column mb-0">
                         <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="vendre.html"> -->
-                            <!-- <a class="nav-link py-1" href="vendre.html"> -->
-                            <a class="nav-link py-1">
-                                Vendre mon bien
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- <a class="nav-link py-1" href="service-and-prices.html"> -->
-                            <!-- <a class="nav-link py-1" href="service-and-prices.html"> -->
-                            <a class="nav-link py-1">
+                            <a class="nav-link py-1" href="service-and-prices.html">
                                 Services & Tarifs
                             </a>
                         </li>
                         <li class="nav-item">
+                            <!-- <a class="nav-link py-1" href="service-and-prices.html"> -->
+                            <a class="nav-link py-1" href="faq.html">
+                                Comment Ça Marche ?
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="offres-et-parrainages.html"> -->
-                            <!-- <a class="nav-link py-1" href="offres-et-parrainages.html"> -->
-                            <a class="nav-link py-1">
-                                Parrainage
+                            <a class="nav-link py-1" href="faq.html">
+                                FAQ
                             </a>
                         </li>
                     </ul>
@@ -3914,58 +3952,28 @@ align-content: center;
                 </div>
 
                 <div class="col-6 col-sm-4 col-md-3 text-center text-md-left px-1 d-none d-sm-block">
-                    <div class="h6 font-weight-semi-bold text-primary">Découvrir</div>
-
-                    <!-- List Group -->
-                    <ul class="nav nav-sm nav-x-0 flex-column mb-0">
-                        <li class="nav-item">
-                            <!-- <a class="nav-link py-1" href="https://www.Imova.pro/service-location"> -->
-                            <!-- <a class="nav-link py-1" href="https://www.Imova.pro/service-location"> -->
-                            <a class="nav-link py-1">
-                                La location
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- <a class="nav-link py-1" href="premium.html"> -->
-                            <!-- <a class="nav-link py-1" href="premium.html"> -->
-                            <a class="nav-link py-1">
-                                Le premium
-                            </a>
-                        </li>
-                        <!-- <li class="nav-item"> -->
-                        <!-- <a class="nav-link py-1" href="blog/archive.html"> -->
-                        <!-- <a class="nav-link py-1" href="blog/archive.html"> -->
-                        <!-- <a class="nav-link py-1">
-                                Le Blog
-                            </a>
-                        </li> -->
-                    </ul>
-                    <!-- End List Group -->
-                </div>
-
-                <div class="col-6 col-sm-4 col-md-3 d-none d-md-block px-1">
                     <div class="h6 font-weight-semi-bold text-primary">A Propos</div>
 
                     <!-- List Group -->
                     <ul class="nav nav-sm nav-x-0 flex-column mb-0">
                         <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="notre-histoire.html"> -->
-                            <!-- <a class="nav-link py-1" href="notre-histoire.html"> -->
-                            <a class="nav-link py-1">
+                            <a class="nav-link py-1" href="notre-histoire.html">
+                                <!-- <a class="nav-link py-1"> -->
                                 Qui sommes-nous ?
                             </a>
                         </li>
                         <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="medias/espace-presse.html"> -->
-                            <!-- <a class="nav-link py-1" href="medias/espace-presse.html"> -->
-                            <a class="nav-link py-1">
+                            <a class="nav-link py-1" href="medias/espace-presse.html">
+                                <!-- <a class="nav-link py-1"> -->
                                 Espace Presse
                             </a>
                         </li>
                         <li class="nav-item">
                             <!-- <a class="nav-link py-1" href="https://www.Imova.pro/jobs" target="_blank"> -->
-                            <!-- <a class="nav-link py-1" href="https://www.Imova.pro/jobs" target="_blank"> -->
-                            <a class="nav-link py-1" target="_blank">
+                            <a class="nav-link py-1" href="jobs.html" target="_blank">
+                                <!-- <a class="nav-link py-1" target="_blank"> -->
                                 Jobs
                             </a>
                         </li>
@@ -3973,6 +3981,8 @@ align-content: center;
                     </ul>
                     <!-- End List Group -->
                 </div>
+
+
 
 
             </div>
@@ -3996,12 +4006,11 @@ align-content: center;
                     <!-- Links -->
                     <ul class="list-inline list-group-flush list-group-borderless mb-0">
                         <li class="list-inline-item pl-sm-3 mr-0">
-                            <a class="list-group-item-action small" href="faq.html#faqGeneralSection">Questions
-                                fréquentes</a>
+                            <a class="list-group-item-action small" href="">Mentions légales</a>
                         </li>
-                        <li class="list-inline-item pl-sm-3">
+                        <!-- <li class="list-inline-item pl-sm-3">
                             <a class="list-group-item-action small" href="cgu.html">Conditions d'utilisation</a>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- End Links -->
                 </div>
