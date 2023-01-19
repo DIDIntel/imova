@@ -1721,31 +1721,75 @@
                                     <!-- End Wizard Load spinner -->
 
                                     <!-- Wizard Progress Bar -->
-                                    <div class="pw-progress progress d-none" style="height: 10px;">
+                                    <div class="pw-progress progress " style="height: 10px;">
                                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" style="width: 0%; max-width: 100%" aria-valuemin="0" aria-valuemax="100" id="stepProgress"></div>
                                     </div>
                                     <!-- End Wizard Progress Bar -->
 
 
+                                    <!-- Adresse -->
                                     <!-- Property Type Section -->
-                                    <div id="propertyType" class="pw-section form-section d-none " data-pw-disable="true">
+                                    <div id="contact1" class="pw-section form-section d-none active" data-pw-disable="false">
+
+                                        <div class="js-form-message">
+                                            <div class="pb-2 mb-4 pl-2 pr-4">
+
+                                                <h3 class="h4 mt-4 text-center my-4">
+                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                        Quelle est l’adresse de votre bien ?
+                                                    </span>
+                                                </h3>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12 col-sm-12 mb-md-12">
+                                                        <div class="form-group" style="text-align: -webkit-auto;">
+                                                            <label class="form-label ml-1 required" for="estimation_Adresse">Adresse</label><input type="text" id="estimation_Adresse" name="estimation[Adresse]" value="Adresse" required="required" class="form-control form-control-sm input-group-pill form-control"
+                                                                placeholder="Adresse" /></div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 mb-md-12">
+                                                        <div class="form-group" style="text-align: -webkit-auto;">
+                                                            <label class="form-label ml-1 required" for="estimation_Ville">Ville</label><input type="text" id="estimation_Ville" name="estimation[Ville]" value="Ville" required="required" class="form-control form-control-sm input-group-pill form-control"
+                                                                placeholder="Ville" /></div>
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 mb-md-12">
+                                                        <div class="form-group" style="text-align: -webkit-auto;">
+                                                            <label class="form-label ml-1 required" for="estimation_Gouvernorat">Gouvernorat</label><input type="text" id="estimation_Gouvernorat" name="estimation[Gouvernorat]" value="Gouvernorat" required="required"
+                                                                class="form-control form-control-sm input-group-pill form-control" placeholder="Gouvernorat" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-navigation row justify-content-around">
+                                            <div id="propertyTypeNext" class="col text-center">
+                                                <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-next">
+                                                    <i class="fa fa-arrow-right"></i>
+                                                    Suivant
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Property Type Section -->
+
+
+                                    <!-- Property Type Section -->
+                                    <div id="propertyType" class="pw-section form-section d-none " data-pw-disable="false">
 
                                         <div class="js-form-message">
                                             <div class="pb-2 mb-4 px-md-2 h-100">
 
                                                 <h3 class="h4 mt-4 text-center my-4">
-                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                    <!-- <span class="text-highlight-primary text-highlight-lg pw-section-title">
                                                          
-                                                    </span>
+                                                    </span> -->
                                                 </h3>
                                                 <div class="row h-100">
                                                     <div class="col-12 my-auto">
                                                         <div id="estimation_propertyType" class="btn-group-toggle btn-group-segment d-flex flex-wrap align-content-center" widget_class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
                                                             data-toggle="buttons"><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_propertyType_0"><input type="radio"
                                                                     name="estimation[propertyType]"
-                                                                    id="estimation_propertyType_0"
-                                                                    value="Maison"
-                                                                    class="pw-next form-check-input"
+                                                                    id="estimation_propertyType_0" value="Maison"
+                                                                    class="pw-jump form-check-input"
+                                                                    data-target="nbRooms"
                                                                     icon="fas fa-home"><i class="fas fa-home"></i>
                                                                 Maison
 
@@ -1754,26 +1798,28 @@
                                                                     name="estimation[propertyType]"
                                                                     id="estimation_propertyType_1"
                                                                     value="Appartement"
-                                                                    class="pw-next form-check-input"
+                                                                    class="pw-jump form-check-input"
+                                                                    data-target="nbRooms"
                                                                     icon="fas fa-building"><i
                                                                     class="fas fa-building"></i> Appartement
 
                                                             </label>
-                                                            <label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_propertyType_1"><input type="radio"
+                                                            <label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_propertyType_2"><input type="radio"
                                                                     name="estimation[propertyType]"
-                                                                    id="estimation_propertyType_1"
-                                                                    value="                                                                Terrain
-                                                                    "
-                                                                    class="pw-next form-check-input"
-                                                                    icon="fas fa-store"><i class="fas fa-store"></i>
+                                                                    id="estimation_propertyType_2" value="Terrain"
+                                                                    class="pw-jump form-check-input"
+                                                                    data-target="Superficie"
+                                                                    icon="fas fa-store"><i
+                                                                    class="fas fa-mountain"></i>
                                                                 Terrain
 
                                                             </label>
-                                                            <label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_propertyType_1"><input type="radio"
+                                                            <label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_propertyType_3"><input type="radio"
                                                                     name="estimation[propertyType]"
-                                                                    id="estimation_propertyType_1"
+                                                                    id="estimation_propertyType_3"
                                                                     value="Local Commercial"
-                                                                    class="pw-next form-check-input"
+                                                                    class="pw-jump form-check-input"
+                                                                    data-target="Superficie"
                                                                     icon="fas fa-store"><i class="fas fa-store"></i>
                                                                 Local Commercial
 
@@ -1782,13 +1828,88 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+
+                                            <div class="form-navigation row">
+                                                <div id="propertyTypePrevious" class="col text-left">
+                                                    <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
+                                                        <i class="fa fa-arrow-left"></i>
+                                                        Retour
+                                                    </button>
+                                                </div>
+                                            </div>
+
                                         </div>
 
                                     </div>
                                     <!-- End Property Type Section -->
 
+
+
+
+
+                                    <!-- Superficie Type Section -->
+                                    <div id="Superficie" class="pw-section form-section d-none" data-pw-disable="false">
+
+                                        <div class="js-form-message">
+                                            <div class="pb-2 mb-4 pl-2 pr-4">
+
+                                                <h3 class="h4 mt-4 text-center my-4">
+                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                        Quelle est l’adresse de votre bien ?
+                                                    </span>
+                                                </h3>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-md-12 col-sm-12 mb-md-12">
+                                                        <div class="form-group" style="text-align: -webkit-auto;">
+                                                            <label class="form-label ml-1 required" for="Superficie_id">Superficie</label><input type="text" id="Superficie_id" name="estimation[Superficie_id]" value="Superficie" required="required" class="form-control form-control-sm input-group-pill form-control"
+                                                                placeholder="Superficie" /></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-navigation row">
+                                            <div id="SuperficiePrevious" class="col text-left">
+                                                <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
+                                                    <i class="fa fa-arrow-left"></i>
+                                                    Retour
+                                                </button>
+                                            </div>
+                                            <div id="SuperficieNext" class="col text-right">
+                                                <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-jump" data-target="fastline">
+                                                    <i class="fa fa-arrow-right"></i>
+                                                    Suivant
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <script>
+                                        // Get the input element
+                                        var inputElement = document.getElementById("Superficie_id");
+
+                                        // Add an event listener for the keyup event
+                                        inputElement.addEventListener("input", function() {
+                                            // Get the current value of the input
+                                            var inputValue = inputElement.value;
+
+                                            // Use a regular expression to check if the input value is a number
+                                            var numberRegex = /^[0-9]*$/;
+                                            if (!numberRegex.test(inputValue)) {
+                                                // If the input value is not a number, remove the non-numeric characters
+                                                inputElement.value = inputValue.replace(/[^0-9]/g, "");
+                                            }
+                                        });
+                                    </script>
+                                    <!-- End Superficie Type Section -->
+
+
+
+
+
                                     <!-- Nb Rooms Section -->
-                                    <div id="nbRooms" class="pw-section form-section d-none" data-pw-disable="true">
+                                    <div id="nbRooms" class="pw-section form-section d-none" data-pw-disable="false">
 
                                         <div class="js-form-message">
                                             <div class="pb-2 mb-4 px-md-2 h-100">
@@ -1802,36 +1923,36 @@
                                                     <div class="col-12 my-auto">
                                                         <fieldset class="form-group">
                                                             <div id="estimation_apiBedroomNb" class="btn-group-toggle btn-group-segment d-flex flex-wrap align-content-center" widget_class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
-                                                                data-toggle="buttons"><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_0"><input type="radio"
-                                                                        name="estimation[apiBedroomNb]"
+                                                                data-toggle="buttons"><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_0"><input
+                                                                        type="radio" name="estimation[apiBedroomNb]"
                                                                         id="estimation_apiBedroomNb_0" value="1"
                                                                         class="pw-next form-check-input">
 
                                                                     Une chambre
 
-                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_1"><input type="radio"
-                                                                        name="estimation[apiBedroomNb]"
+                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_1"><input
+                                                                        type="radio" name="estimation[apiBedroomNb]"
                                                                         id="estimation_apiBedroomNb_1" value="2"
                                                                         class="pw-next form-check-input">
 
                                                                     Deux chambres
 
-                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_2"><input type="radio"
-                                                                        name="estimation[apiBedroomNb]"
+                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_2"><input
+                                                                        type="radio" name="estimation[apiBedroomNb]"
                                                                         id="estimation_apiBedroomNb_2" value="3"
                                                                         class="pw-next form-check-input">
 
                                                                     Trois chambres
 
-                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_3"><input type="radio"
-                                                                        name="estimation[apiBedroomNb]"
+                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_3"><input
+                                                                        type="radio" name="estimation[apiBedroomNb]"
                                                                         id="estimation_apiBedroomNb_3" value="4"
                                                                         class="pw-next form-check-input">
 
                                                                     Quatre chambres
 
-                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_4"><input type="radio"
-                                                                        name="estimation[apiBedroomNb]"
+                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_apiBedroomNb_4"><input
+                                                                        type="radio" name="estimation[apiBedroomNb]"
                                                                         id="estimation_apiBedroomNb_4" value="5"
                                                                         class="pw-next form-check-input">
 
@@ -1846,7 +1967,7 @@
 
                                         <div class="form-navigation row">
                                             <div id="nbRoomsPrevious" class="col text-left">
-                                                <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
+                                                <button type="button" class="pw-jump btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2" data-target="propertyType">
                                                     <i class="fa fa-arrow-left"></i>
                                                     Retour
                                                 </button>
@@ -1873,7 +1994,8 @@
                                                             <div id="estimation_fastline" class="btn-group-toggle btn-group-segment d-flex flex-wrap align-content-center" widget_class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
                                                                 data-toggle="buttons"><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_fastline_0" style="
                                                             border-radius: 0.3125rem;
-                                                        "><input type="radio" name=" estimation[esti. par un expert]"
+                                                        "><input type="radio"
+                                                                        name=" estimation[esti. par un expert]"
                                                                         id="estimation_fastline_0" value="1"
                                                                         class="pw-jump form-check-input"
                                                                         data-target="contact"><i
@@ -1898,7 +2020,7 @@
 
                                         <div class="form-navigation row">
                                             <div id="reasonPrevious" class="col text-left">
-                                                <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2 pw-jump" data-target="propertyType">
                                                     <i class="fa fa-arrow-left"></i>
                                                     Retour
                                                 </button>
@@ -1908,508 +2030,19 @@
                                     </div>
                                     <!-- End Reason Section -->
 
-                                    <!-- Localisation Section -->
-                                    <div id="localisation" class="pw-section form-section d-none">
-
-                                        <div class="js-form-message">
-                                            <div class="pb-2 mb-2 px-2">
-
-                                                <h3 class="h4 mt-4 text-center my-4">
-                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
-                                                        Où se situe le bien ?
-                                                    </span>
-                                                </h3>
-
-                                                <div class="form-group has-feedback">
-                                                    <div class="input-group input-group-pill" style="width: 100%;">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text" id="estimation_addressLabel">
-                                                                <i class="fa fa-search"></i>
-                                                            </span>
-                                                        </div>
-                                                        <input type="text" id="estimation_address_address" name="estimation[address][address]" class="form-control form-control-sm input-group-pill no-autofill pop-location-form form-control" placeholder="Votre adresse postale" autocomplete="new-password" autofill="off"
-                                                            onfocus="this.setAttribute('autocomplete', 'new-password');" data-map="map-estimation_address" />
-                                                    </div>
-                                                </div>
-
-                                                <div id="map-estimation_address" style="height: 300px;"></div>
-
-                                                <div id="popup-estimation_address" class="modal fade " role="dialog">
-                                                    <div class="modal-dialog">
-
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                            </div>
-                                                            <div class="modal-body">
-
-                                                                <div class="h3 text-center">
-                                                                    <span class="fa fa-map-marker"></span> Nous n'avons pas trouvé votre adresse...
-                                                                </div>
-
-                                                                <p class="text-center">Veuillez remplir les champs ci-dessous
-                                                                </p>
-
-                                                                <div class="clearfix"></div>
-
-                                                                <div class="col-xs-2">
-                                                                    <label>N°</label>
-                                                                    <input type="text" id="estimation_address_streetNumber" name="estimation[address][streetNumber]" class="form-control form-control" />
-                                                                </div>
-                                                                <div class="col-xs-10">
-                                                                    <label>Nom de la rue</label>
-                                                                    <input type="text" id="estimation_address_route" name="estimation[address][route]" class="form-control form-control" />
-                                                                </div>
-                                                                <div class="col-xs-8">
-                                                                    <label>Ville</label>
-                                                                    <input type="text" id="estimation_address_locality" name="estimation[address][locality]" class="form-control form-control" />
-                                                                </div>
-                                                                <div class="col-xs-4">
-                                                                    <label>Code postal</label>
-                                                                    <input type="text" id="estimation_address_postalCode" name="estimation[address][postalCode]" class="form-control form-control" />
-                                                                </div>
-                                                                <div class="col-xs-6">
-                                                                    <label>Latitude</label>
-                                                                    <input type="text" id="estimation_address_longitude" name="estimation[address][longitude]" class="form-control" />
-                                                                </div>
-                                                                <div class="col-xs-6">
-                                                                    <label>Latitude</label>
-                                                                    <input type="text" id="estimation_address_latitude" name="estimation[address][latitude]" class="form-control" />
-                                                                </div>
-
-                                                                <div class="col-xs-12" style="display: none;">
-                                                                    <input type="hidden" id="estimation_address_country" name="estimation[address][country]" />
-                                                                </div>
-
-                                                                <div class="clearfix"></div>
-                                                            </div>
-
-                                                            <div class="modal-footer">
-                                                                <div class="text-right">
-                                                                    <button class="btn btn-default btn-large" type="submit"><i class="fa fa-save"></i>
-                                                                        Enregistrer</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <style>
-                                                    .pac-container {
-                                                        z-index: 2000 !important;
-                                                    }
-                                                </style>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="form-navigation row">
-                                            <div id="localisationPrevious" class="col text-left">
-                                                <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
-                                                    <i class="fa fa-arrow-left"></i>
-                                                    Retour
-                                                </button>
-                                            </div>
-                                            <div id="localisationNext" class="col text-right d-none">
-                                                <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-next">
-                                                    <i class="fa fa-arrow-right"></i>
-                                                    Suivant
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Localisation Section -->
-                                    <!-- Features Section -->
-                                    <div id="features" class="pw-section form-section h-100 d-none">
-                                        <div class="js-form-message">
-                                            <div class="pb-2 mb-4 px-md-2 h-100">
-
-                                                <h3 class="h4 mt-4 text-center my-4">
-                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
-                                                        Quelles sont ses caractéristiques ?
-                                                    </span>
-                                                </h3>
-                                                <div class="row justify-content-center">
-                                                    <div class="col-md-6 mb-md-3">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiPropertySurface">Surface du bien (en
-                                                                m²)</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiPropertySurface">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiPropertySurface" name="estimation[apiPropertySurface]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="Surface de votre bien" value="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiPropertySurface">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mb-md-3">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiGardenSurface">Surface du jardin (en
-                                                                m²)</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiGardenSurface">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiGardenSurface" name="estimation[apiGardenSurface]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="Surface de votre jardin" value="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiGardenSurface">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row justify-content-center">
-                                                    <div class="col-md-6 mb-md-3">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiRoomNb">Nombre de pièces</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiRoomNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiRoomNb" name="estimation[apiRoomNb]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="0" min="0" value="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiRoomNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mb-md-3 pw-estim-is-apt d-none">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiFloor">Étage</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiFloor">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiFloor" name="estimation[apiFloor]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="Étage de votre bien" value="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiFloor">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mb-md-3 pw-estim-is-house">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiFloorNb">Nombre d'étages</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiFloorNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiFloorNb" name="estimation[apiFloorNb]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="Nombre d'étages de votre bien" value="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiFloorNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-navigation row">
-                                            <div id="featuresPrevious" class="col text-left">
-                                                <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
-                                                    <i class="fa fa-arrow-left"></i>
-                                                    Retour
-                                                </button>
-                                            </div>
-                                            <div id="featuresNext" class="col text-right d-none">
-                                                <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-next">
-                                                    <i class="fa fa-arrow-right"></i>
-                                                    Suivant
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Features Section -->
-                                    <!-- Commodity Section -->
-                                    <div id="commodity" class="pw-section form-section d-none">
-                                        <div class="js-form-message h-100">
-                                            <div class="pb-2 mb-4 pl-2 pr-4 h-100">
-
-                                                <h3 class="h4 mt-4 text-center my-4">
-                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
-                                                        Présente t-il des spécificités ? <span
-                                                            style='font-size:smaller; opacity: 0.6'>(facultatif)</span>
-                                                    </span>
-                                                </h3>
-                                                <div class="form-group"><label class="form-label ml-1 xxx" for="estimation_apiConstructionYear">Année de
-                                                        construction</label><select class="js-select selectpicker border" name="estimation[apiConstructionYear]" id="estimation_apiConstructionYear" data-width="100%" title="Sélectionnez une période" id="estimation_apiConstructionYear"
-                                                        name="estimation[apiConstructionYear]" class="form-control form-control-sm input-group-pill">
-                                                        <option value="1900">Avant 1915</option>
-                                                        <option value="1915">1915-1944</option>
-                                                        <option value="1945">1945-1974</option>
-                                                        <option value="1975">1975-1989</option>
-                                                        <option value="1990">1990-2009</option>
-                                                        <option value="2011">Après 2010</option>
-                                                        <option value="0">Inconnue</option>
-                                                    </select></div>
-                                                <div class="row justify-content-center my-2">
-                                                    <div class="col-lg-4 mb-md-3">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiParkingNb">Nombre de parkings</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiParkingNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiParkingNb" name="estimation[apiParkingNb]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="0" min="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiParkingNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 mb-md-3">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiTerraceNb">Nombre de
-                                                                terrasses</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiTerraceNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiTerraceNb" name="estimation[apiTerraceNb]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="0" min="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiTerraceNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 mb-md-3">
-                                                        <div class="form-group"><label class="form-label ml-1" for="estimation_apiBalconyNb">Nombre de balcons</label>
-                                                            <div class="input-group input-group-pill">
-                                                                <div class="input-group-prepend input-touch-int-minus" role="button" data-target="estimation_apiBalconyNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-minus-circle text-primary"></i>
-                                                                    </span>
-                                                                </div><input type="text" id="estimation_apiBalconyNb" name="estimation[apiBalconyNb]" class="form-control form-control-sm input-group-pill text-right form-control" data-msg="Merci de saisir une valeur valide"
-                                                                    placeholder="0" min="0" />
-                                                                <div class="input-group-append input-touch-int-plus" role="button" data-target="estimation_apiBalconyNb">
-                                                                    <span class="input-group-text visible-xs-inline-block">
-                                                                        <i class="fa fa-plus-circle  text-primary"></i>
-                                                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row justify-content-center my-2">
-                                                    <div class="col-md-5 col-sm-5 mb-md-3">
-                                                        <div class="form-group">
-                                                            <div class="text-center pb-2">
-                                                                <i class="fad fa-box-full fa-2x text-primary"></i>
-                                                            </div><label class="toggle-switch d-flex align-items-center mb-3" for="estimation_apiCellar">
-                                                                <input type="checkbox" class="toggle-switch-input"
-                                                                    id="estimation_apiCellar" id="estimation_apiCellar"
-                                                                    name="estimation[apiCellar]"
-                                                                    ico="fad fa-box-full fa-2x text-primary">
-                                                                <span class="toggle-switch-label">
-                                                                    <span class="toggle-switch-indicator"></span>
-                                                                </span>
-                                                                <span class="toggle-switch-content">
-                                                                    <span class="d-block text-center">
-                                                                        <label class="mb-0"
-                                                                            for="estimation_apiCellar">Grenier</label>
-                                                            </span>
-                                                            </span>
-
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-5 col-sm-5 mb-md-3">
-                                                        <div class="form-group">
-                                                            <div class="text-center pb-2">
-                                                                <i class="fad fa-house-user fa-2x text-primary"></i>
-                                                            </div><label class="toggle-switch d-flex align-items-center mb-3" for="estimation_apiConcierge">
-                                                                <input type="checkbox" class="toggle-switch-input"
-                                                                    id="estimation_apiConcierge"
-                                                                    id="estimation_apiConcierge"
-                                                                    name="estimation[apiConcierge]"
-                                                                    ico="fad fa-house-user fa-2x text-primary">
-                                                                <span class="toggle-switch-label">
-                                                                    <span class="toggle-switch-indicator"></span>
-                                                                </span>
-                                                                <span class="toggle-switch-content">
-                                                                    <span class="d-block text-center">
-                                                                        <label class="mb-0"
-                                                                            for="estimation_apiConcierge">Concierge</label>
-                                                            </span>
-                                                            </span>
-
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-5 col-sm-5 mb-md-3">
-                                                        <div class="form-group">
-                                                            <div class="text-center pb-2">
-                                                                <i class="fad fa-sort-circle-up fa-2x text-primary"></i>
-                                                            </div><label class="toggle-switch d-flex align-items-center mb-3" for="estimation_apiElevator">
-                                                                <input type="checkbox" class="toggle-switch-input"
-                                                                    id="estimation_apiElevator"
-                                                                    id="estimation_apiElevator"
-                                                                    name="estimation[apiElevator]"
-                                                                    ico="fad fa-sort-circle-up fa-2x text-primary">
-                                                                <span class="toggle-switch-label">
-                                                                    <span class="toggle-switch-indicator"></span>
-                                                                </span>
-                                                                <span class="toggle-switch-content">
-                                                                    <span class="d-block text-center">
-                                                                        <label class="mb-0"
-                                                                            for="estimation_apiElevator">Ascenseur</label>
-                                                            </span>
-                                                            </span>
-
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-5 col-sm-5 mb-md-3">
-                                                        <div class="form-group">
-                                                            <div class="text-center pb-2">
-                                                                <i class="fad fa-swimming-pool fa-2x text-primary"></i>
-                                                            </div><label class="toggle-switch d-flex align-items-center mb-3" for="estimation_apiSwimmingPool">
-                                                                <input type="checkbox" class="toggle-switch-input"
-                                                                    id="estimation_apiSwimmingPool"
-                                                                    id="estimation_apiSwimmingPool"
-                                                                    name="estimation[apiSwimmingPool]"
-                                                                    ico="fad fa-swimming-pool fa-2x text-primary">
-                                                                <span class="toggle-switch-label">
-                                                                    <span class="toggle-switch-indicator"></span>
-                                                                </span>
-                                                                <span class="toggle-switch-content">
-                                                                    <span class="d-block text-center">
-                                                                        <label class="mb-0"
-                                                                            for="estimation_apiSwimmingPool">Piscine</label>
-                                                            </span>
-                                                            </span>
-
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-navigation row">
-                                            <div id="commodityPrevious" class="col text-left">
-                                                <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
-                                                    <i class="fa fa-arrow-left"></i>
-                                                    Retour
-                                                </button>
-                                            </div>
-                                            <div id="commodityNext" class="col text-right">
-                                                <button class="btn btn-primary btn-sm transition-3d-hover mb-md-2 pw-next">
-                                                    <i class="fa fa-arrow-right"></i>
-                                                    Suivant
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Commodity Section -->
-                                    <!-- Compute Section -->
-                                    <div class="pw-section form-section d-none" id="finalLoader" data-pw-disable="true">
-                                        <div class="js-form-message">
-                                            <div class="pb-2 mb-4 pl-2 pr-4">
-                                                <div class="text-center justify-content-center">
-                                                    <div class="spinner-border mt-10 mb-10" style="width: 3rem; height: 3rem;" role="status">
-                                                        <span class="sr-only">Loading...</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Compute Section -->
-
-                                    <!-- Reason Section -->
-                                    <div id="reason" class="pw-section form-section d-none h-100" data-pw-disable="false">
-
-                                        <div class="js-form-message">
-                                            <div class="pb-2 mb-4 px-md-2 h-100">
-
-                                                <h3 class="h4 mt-4 text-center my-4">
-                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
-                                                        Où en est votre projet actuellement ?
-                                                    </span>
-                                                </h3>
-                                                <div class="row h-100">
-                                                    <div class="col-12 my-auto">
-                                                        <fieldset class="form-group">
-                                                            <div id="estimation_reason" class="btn-group-toggle btn-group-segment d-flex flex-wrap align-content-center" widget_class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100"
-                                                                data-toggle="buttons"><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_reason_0"><input type="radio"
-                                                                        name="estimation[reason]"
-                                                                        id="estimation_reason_0"
-                                                                        value="estimation.reason.already"
-                                                                        class="pw-next form-check-input">
-
-                                                                    Mon bien est déjà en vente
-
-                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_reason_1"><input type="radio"
-                                                                        name="estimation[reason]"
-                                                                        id="estimation_reason_1"
-                                                                        value="estimation.reason.planned"
-                                                                        class="pw-next form-check-input">
-
-                                                                    J'ai un projet de vente immédiat ou dans les mois à
-                                                                    venir
-
-                                                                </label><label class="form-control form-control-sm input-group-pill btn btn-custom-toggle-primary btn-pill py-2 px-md-3 my-2 flex-fill card-frame-style-2 mx-0 h-100" for="estimation_reason_2"><input type="radio"
-                                                                        name="estimation[reason]"
-                                                                        id="estimation_reason_2"
-                                                                        value="estimation.reason.info"
-                                                                        class="pw-next form-check-input">
-
-                                                                    Pas de projet, projet d'achat, autres (succession,
-                                                                    banque...)
-
-                                                                </label></div>
-                                                        </fieldset>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-navigation row">
-                                            <div id="reasonPrevious" class="col text-left">
-                                                <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
-                                                    <i class="fa fa-arrow-left"></i>
-                                                    Retour
-                                                </button>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!-- End Reason Section -->
 
                                     <!-- Contact Section -->
-                                    <div id="contact" class="pw-section form-section d-none active">
+                                    <div id="contact" class="pw-section form-section d-none ">
 
                                         <div class="js-form-message">
                                             <div class="pb-2 mb-4 pl-2 pr-4">
+
+                                                <h3 class="h4 mt-4 text-center my-4">
+                                                    <span class="text-highlight-primary text-highlight-lg pw-section-title">
+                                                        Recevez dès maintenant votre estimation réalisée par notre
+                                                        expert IMOVA !
+                                                    </span>
+                                                </h3>
                                                 <div class="row justify-content-center">
                                                     <div class="col-md-6 col-sm-5 mb-md-3">
                                                         <div class="form-group"><label class="form-label ml-1 required" for="estimation_lastname">Nom</label><input type="text" id="estimation_lastname" name="estimation[lastname]" required="required" class="form-control form-control-sm input-group-pill form-control"
@@ -2440,17 +2073,17 @@
                                         </div>
 
                                         <div class="form-navigation row justify-content-around">
-                                            <div id="commodityPrevious" class="col-4 text-left d-none">
+                                            <!-- <div id="commodityPrevious" class="col-4 text-left ">
                                                 <button type="button" class="pw-previous btn btn-sm btn-outline-secondary transition-3d-hover mb-md-2">
                                                     <i class="fa fa-arrow-left"></i>
                                                     Retour
                                                 </button>
-                                            </div>
+                                            </div> -->
                                             <div class="col-6 text-right">
                                                 <button class="btn btn-block btn-primary btn-wide transition-3d-hover mb-md-2 pop_ga_event pop_gt_event pop_fb_form_event" type="submit" data-ga-event="Submit Estimation Form" data-ga-label="Envoi du Formulaire" data-gt-send-to="AW-851910592/xtGlCIiip-EBEMC_nJYD"
                                                     data-fb-type="SubmitEstimationForm">
                                                     <i class="fa fa-arrow-right"></i>
-                                                    Être rappelé </button>
+                                                    Estimer mon bien </button>
                                             </div>
                                         </div>
                                     </div>
@@ -2460,6 +2093,7 @@
                                         name="estimation[_token]" value="jjAeX0QAwxbIPm3j0Idjkqllj1yiBu3-njwSYkwxNB8" />
                                 </form>
                             </div>
+                            <!-- End Estimation Form Container -->
                             <!-- End Estimation Form Container -->
                         </div>
 
