@@ -65,6 +65,11 @@
                     modal.style.display = "none";
                 }
             }
+            // Set minimum dates for the visit
+            today = new Date().toISOString().split("T")[0]
+            document.getElementById("meeting_request_date1").setAttribute("data-min-date", today)
+            document.getElementById("meeting_request_date2").setAttribute("data-min-date", today)
+            document.getElementById("meeting_request_date3").setAttribute("data-min-date", today)
             // END the visit modal 
         })
         .then(() => {
