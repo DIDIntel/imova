@@ -14,12 +14,10 @@
         }
         )
         .then(() => {
-            // Get the modal
+            // Get the offer modal 
             var modal = document.getElementById("modalNewOffer-2304");
-
             // Get the button that opens the modal
             var btn = document.getElementById("modal-offer-2304");
-
             // Get the elements that closes the modal
             var span1 = document.getElementById("closeModal");
             var span2 = document.getElementById("closeModalTop");
@@ -27,7 +25,6 @@
             btn.onclick = function () {
                 modal.style.display = "block";
             }
-
             // When the user clicks on <span> (x), close the modal
             span1.onclick = function () {
                 modal.style.display = "none";
@@ -35,13 +32,40 @@
             span2.onclick = function () {
                 modal.style.display = "none";
             }
-
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
             }
+            // END the offer modal 
+        })
+        .then(() => {
+            // Get the visit modal 
+            var modal = document.getElementById("modalNewMeeting");
+            // Get the button that opens the modal
+            var btn = document.getElementById("modal-schedule");
+            // Get the elements that closes the modal
+            var span1 = document.getElementById("closeMeetingModal");
+            var span2 = document.getElementById("closeMeetingModalTop");
+            // When the user clicks on the button, open the modal
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span1.onclick = function () {
+                modal.style.display = "none";
+            }
+            span2.onclick = function () {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            // END the visit modal 
         })
         .then(() => {
             var script1 = document.createElement('script');
