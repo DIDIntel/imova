@@ -38,6 +38,12 @@
                     modal.style.display = "none";
                 }
             }
+            // Set minimum date for purchase
+            var date = new Date()
+            var today = ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + date.getFullYear()
+            var dateField = document.getElementById("offer_datePurchaseDesired")
+            dateField.setAttribute("data-min-date", today)
+
             // END the offer modal 
         })
         .then(() => {
@@ -66,10 +72,14 @@
                 }
             }
             // Set minimum dates for the visit
-            today = new Date().toISOString().split("T")[0]
-            document.getElementById("meeting_request_date1").setAttribute("data-min-date", today)
-            document.getElementById("meeting_request_date2").setAttribute("data-min-date", today)
-            document.getElementById("meeting_request_date3").setAttribute("data-min-date", today)
+            var date = new Date()
+            var today = ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + date.getFullYear()
+            var date1 = document.getElementById("meeting_request_date1")
+            date1.setAttribute("data-min-date", today)
+            var date2 = document.getElementById("meeting_request_date2")
+            date2.setAttribute("data-min-date", today)
+            var date3 = document.getElementById("meeting_request_date3")
+            date3.setAttribute("data-min-date", today)
             // END the visit modal 
         })
         .then(() => {
