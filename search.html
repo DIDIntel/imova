@@ -372,7 +372,7 @@
 
                 <form name="filter" method="post" id="filter_form" class="" data-mode="ImmoPop">
                     <div hx-get="https://imova-list.herokuapp.com/listings/search" hx-target="#list_properties"
-                        hx-trigger="click from:#search_submit" hx-include="select,input">
+                        hx-trigger="load, click from:#search_submit" hx-include="select,input">
                     </div>
 
 
