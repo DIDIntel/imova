@@ -382,10 +382,26 @@
                         <div id="searchFilterCollapse" data-parent="#searchFormFilters2">
                             <div class="card bg-gray p-3 mt-2">
 
-                                <!-- <div class="h5 font-weight-medium text-center">Affinez vos critères de recherche</div> -->
-
-
                                 <div class="row">
+
+                                    <!-- Property State Selector -->
+                                    <div hx-get="https://imova-list.herokuapp.com/listings/states" hx-trigger="load"
+                                        hx-target="#states_options" hx-swap="outerHTML">
+                                    </div>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="js-focus-state">
+                                            <i class="fas fa-fw fa-city text-primary"></i> &nbsp;
+                                            <label class="" for="filter_states">Gouvernorat</label>
+                                            <div class="input-group input-group-pill">
+                                                <select id="filter_states" name="state"
+                                                    class="form-control select2 form-control" multiple="multiple">
+                                                    <optgroup id="states_options">
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- End Property State Selector -->
 
                                     <!-- Property City Selector -->
                                     <div hx-get="https://imova-list.herokuapp.com/listings/cities" hx-trigger="load"
@@ -399,234 +415,237 @@
                                                 <select id="filter_cities" name="city"
                                                     class="form-control select2 form-control" multiple="multiple">
                                                     <optgroup id="cities_options">
+                                                </select>
+
                                             </div>
-                                            </select>
                                         </div>
                                     </div>
+                                    <!-- End Property City Selector -->
                                 </div>
-                                <!-- End Property Type Selector -->
-
-                            </div>
 
 
-                            <div class="row">
-                                <!-- Property Type Selector -->
-                                <div hx-get="https://imova-list.herokuapp.com/listings/types" hx-trigger="load"
-                                    hx-target="#listing_types_options" hx-swap="outerHTML"></div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="js-focus-state">
-                                        <i class="fas fa-fw fa-home text-primary"></i> &nbsp;
-                                        <label class="" for="filter_type">Type de Bien</label>
-                                        <div class="input-group input-group-pill">
-                                            <select id="filter_type" name="listing_type"
-                                                class="form-control select2 form-control" multiple="multiple">
-                                                <optgroup id="listing_types_options">
+
+                                <div class="row">
+                                    <!-- Property Type Selector -->
+                                    <div hx-get="https://imova-list.herokuapp.com/listings/types" hx-trigger="load"
+                                        hx-target="#listing_types_options" hx-swap="outerHTML"></div>
+                                    <div class="col-12 col-sm-6">
+                                        <div class="js-focus-state">
+                                            <i class="fas fa-fw fa-home text-primary"></i> &nbsp;
+                                            <label class="" for="filter_type">Type de Bien</label>
+                                            <div class="input-group input-group-pill">
+                                                <select id="filter_type" name="listing_type"
+                                                    class="form-control select2 form-control" multiple="multiple">
+                                                    <optgroup id="listing_types_options">
+                                                </select>
+
+                                            </div>
                                         </div>
-                                        </select>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- End Property Type Selector -->
-
-                            <!-- BedRooms Selector -->
-                            <div class="col-12 col-sm-6">
-                                <div>
-                                    <i class="fas fa-fw fa-bed text-primary"></i> &nbsp;
-                                    <label class="" for="filter_bedroom">Nombre de chambres</label>
-                                    <div class="input-group input-group-sm input-group-pill">
-                                        <select id="filter_bedroom" name="bedrooms" class="form-control select2"
-                                            multiple="multiple">
-                                            <option value="1">Une chambre</option>
-                                            <option value="2">Deux chambres</option>
-                                            <option value="3">Trois chambres</option>
-                                            <option value="4">Quatre chambres</option>
-                                            <option value="5">Cinq chambres et plus</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End BedRooms Selector -->
-
-                        </div>
-
-                        <div class="text-center mt-2 mb-2">
-                            <span class="u-divider u-divider--xs u-divider--text">Plus de critères</span>
-                        </div>
-
-
-                        <div class="row p-3 justify-content-around">
-
-                            <!-- Disabled Access CheckBox -->
-                            <div class="col-12 col-sm-6 col-md-2">
-                                <div class="form-group">
-                                    <div class="text-center pb-2">
-                                        <i class="fab fa-accessible-icon fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
-                                        for="filter_disabledAccess">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_disabledAccess"
-                                            id="filter_disabledAccess" name="filter[disabledAccess]"
-                                            ico="fab fa-accessible-icon fa-2x text-primary">
-                                        <span class="toggle-switch-label">
-                                            <span class="toggle-switch-indicator"></span>
-                                        </span>
-                                        <span class="toggle-switch-content">
-                                            <span class="d-block text-center">
-                                                <label class="mb-0" for="filter_disabledAccess">Accessibilité</label>
-                                            </span>
-                                        </span>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End Disabled Access CheckBox -->
-
-                            <!-- Garden CheckBox -->
-                            <div class="col-12 col-sm-6 col-md-2">
-                                <div class="form-group">
-                                    <div class="text-center pb-2">
-                                        <i class="fas fa-house-leave fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
-                                        for="filter_garden">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_garden"
-                                            id="filter_garden" name="filter[garden]"
-                                            ico="fas fa-house-leave fa-2x text-primary">
-                                        <span class="toggle-switch-label">
-                                            <span class="toggle-switch-indicator"></span>
-                                        </span>
-                                        <span class="toggle-switch-content">
-                                            <span class="d-block text-center">
-                                                <label class="mb-0" for="filter_garden">Jardin</label>
-                                            </span>
-                                        </span>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End Garden CheckBox -->
-
-                            <!-- Garage CheckBox -->
-                            <div class="col-12 col-sm-6 col-md-2">
-                                <div class="form-group">
-                                    <div class="text-center pb-2">
-                                        <i class="fad fa-garage-open fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
-                                        for="filter_garage">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_garage"
-                                            id="filter_garage" name="filter[garage]"
-                                            ico="fad fa-garage-open fa-2x text-primary">
-                                        <span class="toggle-switch-label">
-                                            <span class="toggle-switch-indicator"></span>
-                                        </span>
-                                        <span class="toggle-switch-content">
-                                            <span class="d-block text-center">
-                                                <label class="mb-0" for="filter_garage">Garage</label>
-                                            </span>
-                                        </span>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End Garage CheckBox -->
-
-                            <!-- Pool CheckBox -->
-                            <div class="col-12 col-sm-6 col-md-2">
-                                <div class="form-group">
-                                    <div class="text-center pb-2">
-                                        <i class="fas fa-swimming-pool fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3" for="filter_pool">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_pool"
-                                            id="filter_pool" name="filter[pool]"
-                                            ico="fas fa-swimming-pool fa-2x text-primary">
-                                        <span class="toggle-switch-label">
-                                            <span class="toggle-switch-indicator"></span>
-                                        </span>
-                                        <span class="toggle-switch-content">
-                                            <span class="d-block text-center">
-                                                <label class="mb-0" for="filter_pool">Piscine</label>
-                                            </span>
-                                        </span>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End Pool CheckBox -->
-
-                            <!-- Balcony CheckBox -->
-                            <div class="col-12 col-sm-6 col-md-2">
-                                <div class="form-group">
-                                    <div class="text-center pb-2">
-                                        <i class="fad fa-coffee fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
-                                        for="filter_balcony">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_balcony"
-                                            id="filter_balcony" name="filter[balcony]"
-                                            ico="fad fa-coffee fa-2x text-primary">
-                                        <span class="toggle-switch-label">
-                                            <span class="toggle-switch-indicator"></span>
-                                        </span>
-                                        <span class="toggle-switch-content">
-                                            <span class="d-block text-center">
-                                                <label class="mb-0" for="filter_balcony">Balcon</label>
-                                            </span>
-                                        </span>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End Balcony CheckBox -->
-
-                            <!-- Terrasse CheckBox -->
-                            <div class="col-12 col-sm-6 col-md-2">
-                                <div class="form-group">
-                                    <div class="text-center pb-2">
-                                        <i class="fas fa-house-night fa-2x text-primary"></i>
-                                    </div><label class="toggle-switch d-flex align-items-center mb-3"
-                                        for="filter_terrace">
-                                        <input type="checkbox" class="toggle-switch-input" id="filter_terrace"
-                                            id="filter_terrace" name="filter[terrace]"
-                                            ico="fas fa-house-night fa-2x text-primary">
-                                        <span class="toggle-switch-label">
-                                            <span class="toggle-switch-indicator"></span>
-                                        </span>
-                                        <span class="toggle-switch-content">
-                                            <span class="d-block text-center">
-                                                <label class="mb-0" for="filter_terrace">Terrasse</label>
-                                            </span>
-                                        </span>
-
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- End Terrasse CheckBox -->
-
-                        </div>
-
-                        <div class="row">
-
-                            <!-- Search by Ref -->
-                            <div class="col-12">
-                                <div class="js-focus-state">
-                                    <label for="filter_reference">Référence</label>
-                                    <div class="input-group input-group-sm input-group-pill">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="typeProperty">
-                                                <span class="fas fa-filter"></span>
-                                            </span>
+                                    <!-- End Property Type Selector -->
+                                    <!-- BedRooms Selector -->
+                                    <div class="col-12 col-sm-6">
+                                        <div>
+                                            <i class="fas fa-fw fa-bed text-primary"></i> &nbsp;
+                                            <label class="" for="filter_bedroom">Nombre de chambres</label>
+                                            <div class="input-group input-group-sm input-group-pill">
+                                                <select id="filter_bedroom" name="bedrooms" class="form-control select2"
+                                                    multiple="multiple">
+                                                    <option value="1">Une chambre</option>
+                                                    <option value="2">Deux chambres</option>
+                                                    <option value="3">Trois chambres</option>
+                                                    <option value="4">Quatre chambres</option>
+                                                    <option value="5">Cinq chambres et plus</option>
+                                                </select>
+                                            </div>
                                         </div>
-                                        <input type="text" id="filter_reference" name="reference"
-                                            class="form-control form-control" placeholder="Référence" />
-
                                     </div>
+                                    <!-- End BedRooms Selector -->
+
                                 </div>
+
+                                <div class="text-center mt-2 mb-2">
+                                    <span class="u-divider u-divider--xs u-divider--text">Plus de critères</span>
+                                </div>
+
+
+                                <div class="row p-3 justify-content-around">
+
+                                    <!-- Disabled Access CheckBox -->
+                                    <div class="col-12 col-sm-6 col-md-2">
+                                        <div class="form-group">
+                                            <div class="text-center pb-2">
+                                                <i class="fab fa-accessible-icon fa-2x text-primary"></i>
+                                            </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                                for="filter_disabledAccess">
+                                                <input type="checkbox" class="toggle-switch-input"
+                                                    id="filter_disabledAccess" id="filter_disabledAccess"
+                                                    name="filter[disabledAccess]"
+                                                    ico="fab fa-accessible-icon fa-2x text-primary">
+                                                <span class="toggle-switch-label">
+                                                    <span class="toggle-switch-indicator"></span>
+                                                </span>
+                                                <span class="toggle-switch-content">
+                                                    <span class="d-block text-center">
+                                                        <label class="mb-0"
+                                                            for="filter_disabledAccess">Accessibilité</label>
+                                                    </span>
+                                                </span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- End Disabled Access CheckBox -->
+
+                                    <!-- Garden CheckBox -->
+                                    <div class="col-12 col-sm-6 col-md-2">
+                                        <div class="form-group">
+                                            <div class="text-center pb-2">
+                                                <i class="fas fa-house-leave fa-2x text-primary"></i>
+                                            </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                                for="filter_garden">
+                                                <input type="checkbox" class="toggle-switch-input" id="filter_garden"
+                                                    id="filter_garden" name="filter[garden]"
+                                                    ico="fas fa-house-leave fa-2x text-primary">
+                                                <span class="toggle-switch-label">
+                                                    <span class="toggle-switch-indicator"></span>
+                                                </span>
+                                                <span class="toggle-switch-content">
+                                                    <span class="d-block text-center">
+                                                        <label class="mb-0" for="filter_garden">Jardin</label>
+                                                    </span>
+                                                </span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- End Garden CheckBox -->
+
+                                    <!-- Garage CheckBox -->
+                                    <div class="col-12 col-sm-6 col-md-2">
+                                        <div class="form-group">
+                                            <div class="text-center pb-2">
+                                                <i class="fad fa-garage-open fa-2x text-primary"></i>
+                                            </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                                for="filter_garage">
+                                                <input type="checkbox" class="toggle-switch-input" id="filter_garage"
+                                                    id="filter_garage" name="filter[garage]"
+                                                    ico="fad fa-garage-open fa-2x text-primary">
+                                                <span class="toggle-switch-label">
+                                                    <span class="toggle-switch-indicator"></span>
+                                                </span>
+                                                <span class="toggle-switch-content">
+                                                    <span class="d-block text-center">
+                                                        <label class="mb-0" for="filter_garage">Garage</label>
+                                                    </span>
+                                                </span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- End Garage CheckBox -->
+
+                                    <!-- Pool CheckBox -->
+                                    <div class="col-12 col-sm-6 col-md-2">
+                                        <div class="form-group">
+                                            <div class="text-center pb-2">
+                                                <i class="fas fa-swimming-pool fa-2x text-primary"></i>
+                                            </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                                for="filter_pool">
+                                                <input type="checkbox" class="toggle-switch-input" id="filter_pool"
+                                                    id="filter_pool" name="filter[pool]"
+                                                    ico="fas fa-swimming-pool fa-2x text-primary">
+                                                <span class="toggle-switch-label">
+                                                    <span class="toggle-switch-indicator"></span>
+                                                </span>
+                                                <span class="toggle-switch-content">
+                                                    <span class="d-block text-center">
+                                                        <label class="mb-0" for="filter_pool">Piscine</label>
+                                                    </span>
+                                                </span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- End Pool CheckBox -->
+
+                                    <!-- Balcony CheckBox -->
+                                    <div class="col-12 col-sm-6 col-md-2">
+                                        <div class="form-group">
+                                            <div class="text-center pb-2">
+                                                <i class="fad fa-coffee fa-2x text-primary"></i>
+                                            </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                                for="filter_balcony">
+                                                <input type="checkbox" class="toggle-switch-input" id="filter_balcony"
+                                                    id="filter_balcony" name="filter[balcony]"
+                                                    ico="fad fa-coffee fa-2x text-primary">
+                                                <span class="toggle-switch-label">
+                                                    <span class="toggle-switch-indicator"></span>
+                                                </span>
+                                                <span class="toggle-switch-content">
+                                                    <span class="d-block text-center">
+                                                        <label class="mb-0" for="filter_balcony">Balcon</label>
+                                                    </span>
+                                                </span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- End Balcony CheckBox -->
+
+                                    <!-- Terrasse CheckBox -->
+                                    <div class="col-12 col-sm-6 col-md-2">
+                                        <div class="form-group">
+                                            <div class="text-center pb-2">
+                                                <i class="fas fa-house-night fa-2x text-primary"></i>
+                                            </div><label class="toggle-switch d-flex align-items-center mb-3"
+                                                for="filter_terrace">
+                                                <input type="checkbox" class="toggle-switch-input" id="filter_terrace"
+                                                    id="filter_terrace" name="filter[terrace]"
+                                                    ico="fas fa-house-night fa-2x text-primary">
+                                                <span class="toggle-switch-label">
+                                                    <span class="toggle-switch-indicator"></span>
+                                                </span>
+                                                <span class="toggle-switch-content">
+                                                    <span class="d-block text-center">
+                                                        <label class="mb-0" for="filter_terrace">Terrasse</label>
+                                                    </span>
+                                                </span>
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- End Terrasse CheckBox -->
+
+                                </div>
+
+                                <div class="row">
+
+                                    <!-- Search by Ref -->
+                                    <div class="col-12">
+                                        <div class="js-focus-state">
+                                            <label for="filter_reference">Référence</label>
+                                            <div class="input-group input-group-sm input-group-pill">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="typeProperty">
+                                                        <span class="fas fa-filter"></span>
+                                                    </span>
+                                                </div>
+                                                <input type="text" id="filter_reference" name="reference"
+                                                    class="form-control form-control" placeholder="Référence" />
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Search by Ref -->
+
+                                </div>
+                                <a id="search_submit"
+                                    class="btn btn-soft-primary btn-sm transition-3d-hover ml-md-2 my-2 py-1 w-100 w-md-auto">
+                                    Recherche
+                                </a>
                             </div>
-                            <!-- End Search by Ref -->
-
                         </div>
-                        <a id="search_submit"
-                            class="btn btn-soft-primary btn-sm transition-3d-hover ml-md-2 my-2 py-1 w-100 w-md-auto">
-                            Recherche
-                        </a>
-
                     </div>
 
                 </form>
