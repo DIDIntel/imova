@@ -5542,23 +5542,6 @@
         },
         rgZG: function(e, t, n) {
             (function(e) {
-                ! function(e) {
-                    "use strict";
-                    e.PopAnalytics = {
-                        _class: ".pop_ga_event",
-                        init: function() { e(document).ready((function(t) { e.PopAnalytics.setupEvents() })) },
-                        setupEvents: function() { e(this._class).on("click", (function(t) { e.PopAnalytics.onGaClickEvent(this) })) },
-                        onGaClickEvent: function(t) {
-                            if (e.PopAnalytics.checkGaAvailable()) {
-                                var n = e(t).data("ga-event") || t.id,
-                                    o = e(t).data("ga-label"),
-                                    i = parseInt(e(t).data("ga-value") || 0);
-                                ga("send", "event", n, "click", o, i)
-                            }
-                        },
-                        checkGaAvailable: function() { return "undefined" != typeof ga || (console.log("Google Analytics was Not Found!"), !1) }
-                    }, e.PopAnalytics.init()
-                }(e)
             }).call(this, n("EVdn"))
         },
         rtcp: function(e, t, n) {
