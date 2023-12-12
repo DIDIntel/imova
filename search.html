@@ -356,7 +356,7 @@
             <div class="container space-1 mt-6">
 
                 <form name="filter" method="post" id="filter_form" class="" data-mode="ImmoPop">
-                    <div hx-get="https://imova-list.herokuapp.com/listings/search" hx-target="#list_properties" hx-trigger="load, click from:#search_submit" hx-include="select,input">
+                    <div hx-get="https://imova-listings.didintel.dev/listings/search" hx-target="#list_properties" hx-trigger="load, click from:#search_submit" hx-include="select,input">
                     </div>
 
 
@@ -369,7 +369,7 @@
                                 <div class="row">
 
                                     <!-- Property State Selector -->
-                                    <div hx-get="https://imova-list.herokuapp.com/listings/states" hx-trigger="load" hx-target="#states_options" hx-swap="outerHTML">
+                                    <div hx-get="https://imova-listings.didintel.dev/listings/states" hx-trigger="load" hx-target="#states_options" hx-swap="outerHTML">
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <div class="js-focus-state">
@@ -386,7 +386,7 @@
                                     <!-- End Property State Selector -->
 
                                     <!-- Property City Selector -->
-                                    <div id="filter_cities_htmx" hx-get="https://imova-list.herokuapp.com/listings/cities" hx-trigger="load, citi" hx-include="#filter_states" hx-target="#filter_cities" hx-swap="innerHTML">
+                                    <div id="filter_cities_htmx" hx-get="https://imova-listings.didintel.dev/listings/cities" hx-trigger="load, citi" hx-include="#filter_states" hx-target="#filter_cities" hx-swap="innerHTML">
                                     </div>
                                     <div class="col-12 col-sm-6">
                                         <div class="js-focus-state">
@@ -451,7 +451,7 @@
 
                                 <div class="row">
                                     <!-- Property Type Selector -->
-                                    <div hx-get="https://imova-list.herokuapp.com/listings/types" hx-trigger="load" hx-target="#listing_types_options" hx-swap="outerHTML"></div>
+                                    <div hx-get="https://imova-listings.didintel.dev/listings/types" hx-trigger="load" hx-target="#listing_types_options" hx-swap="outerHTML"></div>
                                     <div class="col-12 col-sm-6">
                                         <div class="js-focus-state">
                                             <i class="fas fa-fw fa-home text-primary"></i> &nbsp;

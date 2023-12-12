@@ -103,7 +103,7 @@
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const pk = urlParams.get('pk')
-    fetch('https://imova-list.herokuapp.com/listings/' + pk)
+    fetch('https://imova-listings.didintel.dev/listings/' + pk)
         .then(response => response.text())
         .then(response => {
             document.getElementById("listing_details").innerHTML = response;
